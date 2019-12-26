@@ -31,7 +31,7 @@ weatherForm.addEventListener('submit', (e) => {
 
             const findRain = data.nextWet.find(hour => hour.precipProbability > 0.5)
             console.log(findRain)
-            console.log(data.nextWet)
+            console.table(data.nextWet)
             if (findRain) {
                 var date = new Date(findRain.time*1000)
                 var hours = date.getHours()
