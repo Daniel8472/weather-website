@@ -13,7 +13,9 @@ const forecast = (a, b, callback) => {
                 temp: body.currently.temperature,
                 rain: body.currently.precipProbability,
                 summary: body.daily.data[0].summary,
-                dailySummary: body.daily.data[1].summary
+                dailySummary: body.daily.data[1].summary,
+                hourlySumm: body.minutely.summary,
+                nextRain: body.hourly.data
             })
         }
     })
